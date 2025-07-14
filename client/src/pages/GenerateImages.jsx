@@ -34,7 +34,7 @@ const GenerateImages = () => {
             const response = await apiRequest(
                 'POST',
                 '/api/ai/generate-image',
-                {prompt} ,
+                {prompt,publish} ,
                 token);
 
             if (response.success) {

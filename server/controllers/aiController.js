@@ -98,7 +98,7 @@ export const generateImage = async (req, res) => {
     try {
         const { userId } = await req.auth();
         const { prompt, publish } = req.body;
-        const { plan, free_usage } = req;
+        const { plan } = req;
 
         if (plan !== "premium") {
             return sendResponse(res, 400, "Upgrade your plan to continue.");
